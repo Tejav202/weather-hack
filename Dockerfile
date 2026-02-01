@@ -20,5 +20,5 @@ EXPOSE 8080
 ENV PORT=8080
 ENV HOST=0.0.0.0
 
-# Run the server using uvicorn
-CMD ["uvicorn", "server:mcp.app", "--host", "0.0.0.0", "--port", "8080"]
+# Run the server using fastmcp's built-in run command (More reliable than raw uvicorn for this lib)
+CMD ["fastmcp", "run", "server.py", "--host", "0.0.0.0", "--port", "8080"]
